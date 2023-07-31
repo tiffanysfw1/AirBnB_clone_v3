@@ -24,7 +24,7 @@ class DBStorage:
     """interaacts with the MySQL database"""
     __engine = None
     __session = None
-           
+
     def get(self, cls, id):
         """Retrieve one object based on class and ID"""
         # Implementation of the get method

@@ -40,7 +40,7 @@ class FileStorage:
                 if obj_cls == cls.__name__:
                     count += 1
             return count
-                   
+
     def all(self, cls=None):
         """returns the dictionary __objects"""
         if cls is not None:
