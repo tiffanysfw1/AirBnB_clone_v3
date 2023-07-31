@@ -1,5 +1,5 @@
-import json
-from models.amenity import Amenity
+
+m models.amenity import Amenity
 from models.base_model import BaseModel
 from models.city import City
 from models.place import Place
@@ -71,4 +71,3 @@ class FileStorage:
         if cls:
             return len(self.all(cls))
         return len(self.__objects)
-
