@@ -1,16 +1,14 @@
-from flask import Flask
+from flask import Flask, Blueprint, jsonify
+import os
+from api.v1.views import app_views
 
 app = Flask(__name__)
-from models import storage
-from api.v1.views import app_views
+app.url_map.strict_slashes = False
 app.register_blueprint(app_views)
-def teardown_app_context(exception=None):
-    """Method to close the database connection at the end of the request."""
-    storage.close()
-if __name__ == '__main__':
-    # Set host and port based on environment variables or default values
-    host = os.getenv('HBNB_API_HOST', '0.0.0.0')
-    port = int(os.getenv('HBNB_API_PORT', '5000'))
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
-    # Run the app with threaded=True
-    app.run(host=host, port=port, threaded=True)
+if __name__ == '__main__':
+    host = os.getenv('HBNB_API_HOST', '0.0.0.0')
+    port = os.getenv('HBNB_API_PORT', '5000')
+    app.run(host=host, port=port)
+
