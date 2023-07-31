@@ -81,18 +81,18 @@ class TestBaseModel(unittest.TestCase):
 
     def test_datetime_attributes(self):
         # Test that two BaseModel instances have different datetime objects
-        and that upon creation have identical updated_at and created_at
-        value.
-        #Create the first BaseModel instance
+        # and that upon creation have identical updated_at and created_at
+        # value.
+        # Create the first BaseModel instance
         inst1 = BaseModel()
-        #Store its created_at and updated_at values
+        # Store its created_at and updated_at values
         tic_created_at = inst1.created_at
         tic_updated_at = inst1.updated_at
-        #wait for a small time difference
+        # wait for a small time difference
         time.sleep(0.001)
-        #create the second BaseModel instance
+        # create the second BaseModel instance
         inst2 = BaseModel()
-        #Store its created_at and updated_at values
+        # Store its created_at and updated_at values
         toc_created_at = inst2.created_at
         toc_updated_at = inst2.updated_at
 
@@ -106,7 +106,7 @@ class TestBaseModel(unittest.TestCase):
 
         # Compare created_at values of the two instances (should be different)
         self.assertNotEqual(inst1.created_at, inst2.created_at)
-       
+
     def test_uuid(self):
         # Test that id is a valid uuid
         inst1 = BaseModel()
@@ -158,7 +158,7 @@ class TestBaseModel(unittest.TestCase):
     @mock.patch('models.storage')
     def test_save(self, mock_storage):
         # Test that save method updates `updated_at` and calls
-        `storage.save`
+        "storage.save"
         inst = BaseModel()
         old_created_at = inst.created_at
         old_updated_at = inst.updated_at
