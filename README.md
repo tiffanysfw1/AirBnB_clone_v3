@@ -155,7 +155,7 @@ No known bugs at this time.
 
 ## Authors
 Tiffany Chetalam(tiffahchetalam@gmail.com)
-Collins Luke(Collinsluke721@gmail.com)
+Dammy Itadare(samuelson.os19@gmail.com)
 
 Second part of Airbnb: Joann Vuong
 ## License
