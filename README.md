@@ -157,6 +157,6 @@ No known bugs at this time.
 Tiffany Chetalam(tiffahchetalam@gmail.com)
 Dammy Itadare(samuelson.os19@gmail.com)
 
-Second part of Airbnb: Joann Vuong
+
 ## License
 Public Domain. No copy write protection. 
